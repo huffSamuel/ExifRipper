@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="ExifRipper.UI.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:c ="clr-namespace:ExifRipper.UI.Converters"
+             xmlns:local="clr-namespace:ExifRipper.UI.Views"
+             mc:Ignorable="d" 
+             Background="WhiteSmoke"
+             d:DesignHeight="480" d:DesignWidth="640">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <c:InverseBooleanToVisibilityConverter x:Key="InvBoolToVis"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Export" cal:Message.Attach="ExportCSV()"/>
+                    <MenuItem Header="_About" cal:Message.Attach="About()"/>
+                    <MenuItem Header="_Exit" cal:Message.Attach="Exit()"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <!-- Browse control -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Folder"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Right"
+                       FontSize="16"
+                       Margin="24 24 8 8"
+                       Grid.Column="0"/>
+            <TextBox Text="{Binding FolderPath}"
+                     IsReadOnly="True"
+                     Margin="8 24 8 8"
+                     Grid.Column="1"/>
+            <Button Content="Browse" 
+                    Margin="8 24 24 8"
+                    Grid.Column="2"
+                    Padding="4"
+                    cal:Message.Attach="SelectFolder()"/>
+        </Grid>
+<!-- Output control -->
+        <ScrollViewer Grid.Row="2" Visibility="{Binding Path=IsProcessing, Converter={StaticResource InvBoolToVis}}" VerticalScrollBarVisibility="Auto">
+            <DataGrid VerticalScrollBarVisibility="Disabled"
+                      DataContext="{Binding ExifCollectionViewSource}"
+                      ItemsSource="{Binding}"
+                      AutoGenerateColumns="True"
+                      CanUserAddRows="False"
+                      Margin="24 8 24 24"/>
+        </ScrollViewer>
+        <ProgressBar Grid.Row="2" 
+                     IsIndeterminate="True" 
+                     Height="25"
+                     Margin="48"
+                     VerticalAlignment="Center" 
+                     Visibility="{Binding Path=IsProcessing, Converter={StaticResource BoolToVis}}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="dir7B7536B039DDB5F997BEB034C3980F7E" Name="Licenses" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ProductFilesComponentGroup">
+            <Component Id="cmpF6DB600EAE4F92B06118C49F01583429" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil58D641A69C1F9F9B3767F37A52968AEA" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.dll" />
+            </Component>
+            <Component Id="cmp3ADD63EC603C0189D3C536D6FE228F29" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil22BB2F1FEFE5A4C8C7066B4FFB40BA50" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.Platform.Core.dll" />
+            </Component>
+            <Component Id="cmp6E4F12F91C4B75E02675BB4C94196438" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil347D66AF0F2351A1DF20454796FF4F18" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.Platform.Core.xml" />
+            </Component>
+            <Component Id="cmp1C206319B53EA02514D73AF8086C62B4" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filA7E995C50EC209623795FDBA9E10F3FA" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.Platform.dll" />
+            </Component>
+            <Component Id="cmp3E3AA980BDCF05810907BC4EB3821194" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil979D2E4B61E2F3E59B8E1F13EA8C35C4" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.Platform.xml" />
+            </Component>
+            <Component Id="cmp17D9A8147FAEAB525E5B8101916313BA" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF38A8DADF810A6008E9C37F6AB2942EF" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Caliburn.Micro.xml" />
+            </Component>
+            <Component Id="cmpDFE116C45A45054A8ED20B4080E227C6" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filBEC692899295E615997DD8FD8504D7A3" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\ExifRipper.exe" />
+            </Component>
+            <Component Id="cmp0AF74EDE046E2C33FD6A9D0BA825FB28" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1B5011F89933EEE88267863B697EC6E0" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\ExifRipper.exe.config" />
+            </Component>
+            <Component Id="cmp017BFB3832A5B110A2B3A350E13F2A5C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil17E34524E8398461D615894C92558FE9" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\System.Windows.Interactivity.dll" />
+            </Component>
+            <Component Id="cmpB23AB70DE190CFE70B588C10BCE52D0D" Directory="dir7B7536B039DDB5F997BEB034C3980F7E" Guid="*">
+                <File Id="fil5A94822B169E7FDD9704ABFC0A1BFA91" KeyPath="yes" Source="$(var.ExifRipper.UI.TargetDir)\Licenses\Caliburn.Micro.txt" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>
