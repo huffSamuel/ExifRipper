@@ -22,6 +22,7 @@ To export the data to a CSV, select **File > Export**, then select where you wou
 * Support for additional Exif tags
 * UI Improvements (Remove Windows 98 Theme)
 * Remove Caliburn.Micro dependency
+* Move business logic fully to ExifRipper.ApplicationHost
 
 # Support
 Please submit issues via the issue tracker.
