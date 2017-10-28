@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExifRipper.ApplicationHost
+namespace ExifRipper.UI.Domain
 {
-    public class Class1
+    public class ExifField
     {
+        public int Tag;
+        public string Key;
+
     }
 }

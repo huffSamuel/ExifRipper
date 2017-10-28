@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}</ProjectGuid>
+    <ProjectGuid>{329D7097-4427-4360-8A11-1728797724A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExifRipper.ApplicationHost</RootNamespace>
-    <AssemblyName>ExifRipper.ApplicationHost</AssemblyName>
+    <RootNamespace>ExifRipper.Domain</RootNamespace>
+    <AssemblyName>ExifRipper.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,16 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExifRipper.cs" />
-    <Compile Include="Exif\ExifData.cs" />
-    <Compile Include="Exif\ExifTag.cs" />
+    <Compile Include="ExifTag.cs" />
+    <Compile Include="Exif\ExifType.cs" />
+    <Compile Include="Exif\IExifTag.cs" />
+    <Compile Include="Exif\IFileExifData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExifRipper.Domain\ExifRipper.Domain.csproj">
-      <Project>{329d7097-4427-4360-8a11-1728797724a8}</Project>
-      <Name>ExifRipper.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -106,6 +106,19 @@ namespace ExifRipper.UI.ViewModels
 
         }
 
+        public void PurgeExif()
+        {
+            if(MessageBox.Show("This will destroy ALL EXIF data. Are you sure you want to do this?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                // TODO: Implement
+            }
+        }
+
+        public void SelectFields()
+        {
+            
+        }
+
         public void Exit()
         {
             System.Windows.Application.Current.Shutdown();

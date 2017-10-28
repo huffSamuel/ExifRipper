@@ -86,6 +86,8 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Converters\InverseBooleanToVisibilityConverter.cs" />
     <Compile Include="Domain\ExifData.cs" />
+    <Compile Include="Domain\ExifField.cs" />
+    <Compile Include="Domain\ExifType.cs" />
     <Compile Include="Models\MainModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />

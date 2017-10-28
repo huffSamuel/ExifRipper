@@ -27,6 +27,10 @@
                     <MenuItem Header="_About" cal:Message.Attach="About()"/>
                     <MenuItem Header="_Exit" cal:Message.Attach="Exit()"/>
                 </MenuItem>
+                <MenuItem Header="_Options">
+                    <MenuItem Header="_Purge Exif" cal:Message.Attach="PurgeExif()"/>
+                    <MenuItem Header="_Select Fields" cal:Message.Attach="SelectFields()"/>
+                </MenuItem>
             </Menu>
         </DockPanel>
         <!-- Browse control -->

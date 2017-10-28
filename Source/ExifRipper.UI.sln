@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifRipper.UI", "ExifRipper
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "ExifRipper.Installer", "ExifRipper.Installer\ExifRipper.Installer.wixproj", "{4639F986-4F96-4E98-A75D-AE0E860B297C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifRipper.ApplicationHost", "ExifRipper.ApplicationHost\ExifRipper.ApplicationHost.csproj", "{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifRipper.Domain", "ExifRipper.Domain\ExifRipper.Domain.csproj", "{329D7097-4427-4360-8A11-1728797724A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExifRipper.ApplicationHost.Tests", "ExifRipper.ApplicationHost.Tests\ExifRipper.ApplicationHost.Tests.csproj", "{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E2BBBDB5-2920-4A43-99C9-FB93C1F7C07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +37,36 @@ Global
 		{4639F986-4F96-4E98-A75D-AE0E860B297C}.Release|Any CPU.ActiveCfg = Release|x86
 		{4639F986-4F96-4E98-A75D-AE0E860B297C}.Release|x86.ActiveCfg = Release|x86
 		{4639F986-4F96-4E98-A75D-AE0E860B297C}.Release|x86.Build.0 = Release|x86
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B0D55DE-FFB4-4210-A1A4-9CD7924C675A}.Release|x86.Build.0 = Release|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Debug|x86.Build.0 = Debug|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{329D7097-4427-4360-8A11-1728797724A8}.Release|x86.Build.0 = Release|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Debug|x86.Build.0 = Debug|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Release|x86.ActiveCfg = Release|Any CPU
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFD1F0AA-C9CC-4C8D-B8E3-095839157417} = {E2BBBDB5-2920-4A43-99C9-FB93C1F7C07F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99929819-7AF5-42D5-8085-EF8CC6A6EB5E}
